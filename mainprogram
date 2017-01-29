@@ -1,0 +1,47 @@
+#!/bin/bash
+outsideTemperature=101 #outside temperature variable
+turboChainOilerButton=0 #button listener
+turboChainCleaning=$(echo Some code goes here)
+oilPump=$(echo Oil pump is running) #code to triger oil pump
+oilPumpPulseDuration=1 #in seconds maybe
+tempSetting0=$(echo "Code for tempsetiing0 is running")
+tempSetting1=$(echo "Code for tempsetiing1 is running")
+tempSetting2=$(echo "Code for tempsetiing2 is running")
+tempSetting3=$(echo "Code for tempsetiing3 is running")
+tempSetting4=$(echo "Code for tempsetiing4 is running")
+
+
+if [ $turboChainOilerButton -eq 1 ]; then
+	echo This is turbo chain clening with oil
+	echo outsideTemperature varible = $outsideTemperature
+	echo turboCahinoilerButton variable = $turboChainOilerButton
+fi
+
+
+if [ $outsideTemperature -lt 32 ]; then
+	echo $oilPump
+	echo $oilPumpDuration
+	echo "Temperature is less than 32"
+	echo tempSetting0 vaiable is $tempSetting0
+elif [ $outsideTemperature -ge 32 ] && [ $outsideTemperature -le 50 ]; then
+	echo $oilPump
+	echo $oilPumpDuration
+	echo "Temperature is greater than 32 but less than 50"
+	echo tempSetting1 vaiable is $tempSetting1
+elif [ $outsideTemperature -ge 50 ] && [ $outsideTemperature -le 80 ]; then
+	echo $oilPump
+	echo $oilPumpDuration
+	echo "Temperature is greater than 50 but less than 80"
+	echo tempSetting1 vaiable is $tempSetting2
+elif [ $outsideTemperature -ge 80 ] && [ $outsideTemperature -le 100 ]; then
+	echo $oilPump
+	echo $oilPumpDuration
+	echo "Temperature is greater than 80 but less than 100"
+	echo tempSetting3 vaiable is $tempSetting3
+else
+	echo $oilPump
+	echo $oilPumpDuration
+	echo "Temperature is greater than 100"
+	echo tempSetting4 vaiable is $tempSetting4
+	
+fi	
